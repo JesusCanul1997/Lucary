@@ -1,5 +1,5 @@
 package conexiones;
-
+//importacion de las librerias
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -20,9 +20,10 @@ public class conexion {
     String contra="";
     
     try{
-        Class.forName(driver);}
-    catch(ClassNotFoundException e){
-        JOptionPane.showMessageDialog(null,"driver no encontrado");}
+        Class.forName(driver);
+    }catch(ClassNotFoundException e){
+        JOptionPane.showMessageDialog(null,"Driver no encontrado");
+    }
      
     try{
       contacto=DriverManager.getConnection(coneccion,usuario,contra);}
